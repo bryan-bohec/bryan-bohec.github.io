@@ -5,6 +5,7 @@
         <title>Portfolio Bryan Bohec</title>
         <link rel="stylesheet" type= "text/css "href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <link rel="icon" href="images/b.png">
         <script type="text/javascript">
 
         </script>
@@ -75,7 +76,7 @@
 
 
                 <!--Debut sous partie Deux-->
-                <div class="sousPartieDeux" id="compétences">
+                <div class="sousPartieDeux" id="compétences2">
                     <div class="sousTitreDeux">
                         <h2 class="titresParagraphes" id="impair">Compétences</h2>
                     </div>
@@ -116,7 +117,7 @@
 
 
                 <!--Debut sous partie trois-->
-                <div class="sousPartieTrois"  id="projets">
+                <div class="sousPartieTrois"  id="projets2">
 
                     <div class="sousTitreTrois">
                         <h2 class="titresParagraphes">Projets</h2>
@@ -268,12 +269,26 @@
     };
     var monscroll2 = document.getElementById('compétences');
     monscroll2.onclick=function(){
-        window.scrollTo(0,1750);
+        var ele = document.getElementById("compétences2");
+        var x = 45;
+        var position = ele.getBoundingClientRect().top;
+        var maPosition = position - x;
+        window.scrollTo({
+         top: maPosition,
+         behavior: "smooth"
+    })
     };
 
     var monscroll3 = document.getElementById('projets');
     monscroll3.onclick=function(){
-        window.scrollTo(0,2550);
+        var ele = document.getElementById("projets2");
+        var x = 45;
+        var position = ele.getBoundingClientRect().top;
+        var maPosition = position - x;
+        window.scrollTo({
+         top: maPosition,
+         behavior: "smooth"
+        })
     };
 
     var monscroll4 = document.getElementById('meContacter');
