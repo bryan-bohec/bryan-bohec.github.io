@@ -206,7 +206,7 @@ body {
 }
 
 .sousPartieDeux {
-    margin-top: 200px;
+    margin-bottom: 300px;
 }
 
 #impair {
@@ -253,7 +253,7 @@ body {
 
 
 
-/* PARRTIE DEUX IMAGES*/
+/* PARTIE DEUX IMAGES*/
 .container{
     width: 90%;
     padding: 10px;
@@ -286,6 +286,7 @@ body {
 
 .sousPartieTrois {
     margin-top: 15%;
+    margin-bottom: 300px;
 }
 
 .conteneurDemineur {
