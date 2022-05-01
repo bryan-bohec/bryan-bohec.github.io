@@ -286,7 +286,7 @@ body {
     width: 250px;
     margin: 0 10px;
     box-shadow: 0 0 20px 2px rgba(74, 129, 230, 0.1);
-    transition: 1s;
+    transition: 0.5s;
 
 }
 .box img{
@@ -297,6 +297,7 @@ body {
 .box:hover{
     transform: scale(1.3);
     z-index: 2;
+    background-color:lightcyan;
 }
 /* FIN PARTIE DEUX IMAGES*/
 
