@@ -13,11 +13,17 @@
 
 nav {
     background-color: #0a192f;
-    height: 100px;
+    height: 95px;
+    top : 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    transition: filter 0.2s;
 }
 
+
 nav ul {
-    float: right;
+    float :right;
     margin-right: 10%;
 }
 
@@ -93,7 +99,7 @@ body {
 
 
 .introduction {
-    margin-top : 18%;
+    margin-top : 27%;
     margin-bottom: 45%;
 }
 
@@ -149,6 +155,18 @@ body {
 }
 .sousPartieUneTexte p{
     margin-bottom: 1em;
+}
+
+.sousPartieUneTexte .texteBleu {
+    color : cyan;
+}
+
+.sousPartieUne .texteCoral {
+    color : lightcoral;
+}
+
+.sousPartieUne .texteJaune {
+    color : yellow;
 }
 
 .image {
@@ -321,7 +339,7 @@ body {
     width: 50%;
     float: right;
     margin-right: 7em;
-    margin-top: -10em;
+    margin-top: -11em;
 
     color: cyan;
     visibility : hidden;
@@ -379,6 +397,62 @@ body {
     opacity: 0;
     transition: opacity 2s;
 }
+
+.conteneurQuiPrends {
+    margin-bottom: 40px;
+}
+
+.wta {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+    transition: border 1s, transform 1s;
+    border: 1px solid cyan;
+    margin-left: 30%;
+    margin: 10px auto;
+}
+
+.wta:hover {
+    cursor :pointer;
+    background-color: lightblue;
+    border:10px solid black;
+    resize: both;
+    border-image: url("images/bordure.svg") 1;
+}
+
+.wta img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.texteWTA {
+    width: 50%;
+    float: right;
+    margin-right: 7em;
+    margin-top: -11em;
+    color: cyan;
+    visibility :hidden;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.texteWTA h3 {
+    margin-bottom: 0.5em;
+    width: 120%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

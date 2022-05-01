@@ -5,7 +5,7 @@
         <title>Portfolio Bryan Bohec</title>
         <link rel="stylesheet" type= "text/css "href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-        <link rel="icon" href="images/b.png">
+        <link rel="icon" href="images/letter-b.png">
         <script type="text/javascript">
 
         </script>
@@ -17,7 +17,7 @@
 
 
         <header>
-            <nav>
+            <nav id="navBar">
                 <a href="cv.pdf" target="blank" id="CV">Voir mon CV ! </a>
     
                 <ul class = "listeNavigation">
@@ -52,15 +52,15 @@
                 <!--Fin Introduction et bouton-->
 
                 <!--Sous Partie une-->
-                <div class="sousPartieUne" id="aProposDeMoi">
+                <div class="sousPartieUne" id="aProposDeMoi3">
                     <div>
                         <h2 class="titresParagraphes">A propos de moi</h2>
                     </div>
 
                     <div class="sousPartieUneTexte">
-                        <p>Bonjour ! Moi c'est Bryan, étudiant en BUT informatique parcours réalisation d'applications. Passionné par les nouvelles technologies et le monde d'internet, j'aspire à découvrir le métier de développeur web.</p>
-                        <p> Dans ce cadre, j'espère décrocher une alternance dans le domaine afin de gagner en expérience et être davatange preparé au monde du travail.</p>
-                        <p> D'ailleurs, ce site est entièrement crée en HTML/CSS. Cependant, je m'intéresse également à à d'autres langages comme Javascript et ses frameworks que je compte apprendre, ainsi qu'au PHP.</p>
+                        <p>Bonjour ! Moi c'est <span class="texteBleu">Bryan</span>, étudiant en <span class="texteBleu">BUT informatique</span> parcours réalisation d'applications. Passionné par les nouvelles technologies et le monde d'internet, j'aspire à découvrir le métier de <span class="texteBleu"> développeur web</span>.</p>
+                        <p> Dans ce cadre, je souhaite poursuivre mes études en alternance dans le domaine afin de gagner en expériences et en compétences.</p>
+                        <p> D'ailleurs, ce site est crée en <span class="texteCoral"> HTML/CSS</span>, avec un peu de <span class="texteJaune">javascript</span>. Je compte en apprendre plus sur ce dernier language, et je voudrais découvrir ses differents frameworks.</p>
                     </div>
 
                     <div class="conteneurImage">
@@ -137,7 +137,7 @@
 
                             <div class="texteDemineur" id ="texteDemineur">
                                 <h3>Projet de C++ : jeu du démineur - binôme</h3>
-                                <p>L'objectif est de programmer un démineur en lignes de commandes. Fonctions récursives, fonction de remplissage etc...</p>
+                                <p>L'objectif est de programmer un démineur en lignes de commandes. Découverte des fonctions récursives, fonction de remplissage etc...</p>
                             </div>
                         </div>
 
@@ -150,7 +150,19 @@
 
                             <div class="texteQuiPrend" id="texteQuiPrend">
                                 <h3>Projet de Java : jeu du 6 qui prends! - binôme</h3>
-                                <p>L'objectif est de réaliser le jeu de carte "6quiprends!" en ligne de commandes. Découverte de la programmation orientée objet et de la structuration de données</p>
+                                <p>L'objectif est de réaliser le jeu de carte "6quiprends!" en ligne de commandes. Découverte de la programmation orientée objet et de la structuration de données.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="conteneurWTA">
+                            <div class="wta" id="wta">
+                                <img src="images/wta.png">
+                            </div>
+
+                            <div class="texteWTA" id="texteWTA">
+                                <h3>Projet de C : classement WTA - binôme</h3>
+                                <p>L'objectif est de réaliser un programme d'enregistrement des résultats de matchs des tournois de tennis de la WTA, et de pouvoir réaliser un classement des joueuses par tournoi ou par saison.</p>
                             </div>
 
                         </div>
@@ -256,34 +268,69 @@
 </script>
 
 <script type="text/javascript">
+    var wta = document.getElementById('wta');
+    var texteWTA = document.getElementById('texteWTA')
+    var compteurWTA = 0;
+    wta.onclick=function(){
+        if (compteurWTA == 0) {
+            wta.style.transform += 'translateX('+(-300)+'px)';
+            wta.style.backgroundColor = 'lightblue';
+            wta.style.border = 10 + 'px solid black';
+            wta.style.resize = 'both';
+            wta.style.borderImage = 'url("images/bordure.svg") 1';
+            texteWTA.style.visibility = 'visible';
+            texteWTA.style.opacity = 1
+        }
+        compteurWTA = 1;
+        
+    };
+</script>
+
+<script type="text/javascript">
     window.onload = function () {
     window.scrollTo(0, 0);
     };
+
+    
     var monscroll = document.getElementById('aProposDeMoi');
     monscroll.onclick=function(){
-        window.scrollTo(0,880);
-    };
-    var monscroll5 = document.getElementById('aProposDeMoi2');
-    monscroll5.onclick=function(){
-        window.scrollTo(0,880);
-    };
-    var monscroll2 = document.getElementById('compétences');
-    monscroll2.onclick=function(){
-        var ele = document.getElementById("compétences2");
-        var x = 45;
-        var position = ele.getBoundingClientRect().top;
+        var ele = document.getElementById("aProposDeMoi3");
+        var x = 195;
+        var position = ele.offsetTop;
         var maPosition = position - x;
         window.scrollTo({
          top: maPosition,
          behavior: "smooth"
-    })
+        })
+    };
+    var monscroll5 = document.getElementById('aProposDeMoi2');
+    monscroll5.onclick=function(){
+        var ele = document.getElementById("aProposDeMoi3");
+        var x = 195;
+        var position = ele.offsetTop;
+        var maPosition = position - x;
+        window.scrollTo({
+         top: maPosition,
+         behavior: "smooth"
+        })
+    };
+    var monscroll2 = document.getElementById('compétences');
+    monscroll2.onclick=function(){
+        var ele = document.getElementById("compétences2");
+        var x = 145;
+        var position = ele.offsetTop;
+        var maPosition = position - x;
+        window.scrollTo({
+         top: maPosition,
+         behavior: "smooth"
+        })
     };
 
     var monscroll3 = document.getElementById('projets');
     monscroll3.onclick=function(){
         var ele = document.getElementById("projets2");
-        var x = 45;
-        var position = ele.getBoundingClientRect().top;
+        var x = 145;
+        var position = ele.offsetTop;
         var maPosition = position - x;
         window.scrollTo({
          top: maPosition,
@@ -295,5 +342,25 @@
     monscroll4.onclick=function(){
         window.scrollTo(0,4000);
     };
+
+
+
+
+    window.onscroll = function(ev) {
+        var x = document.getElementById('navBar');
+        if ((window.innerHeight + window.pageYOffset) == window.innerHeight) {
+            x.style.filter = 'drop-shadow(0px  0px 0px black)';
+        }
+        if ((window.innerHeight + window.pageYOffset) != window.innerHeight) {
+            x.style.filter = 'drop-shadow(0px  4px 4px black)';
+        }
+    };
+
+
+
+
+
+
+
     
 </script>
