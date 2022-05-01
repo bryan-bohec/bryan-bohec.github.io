@@ -211,6 +211,11 @@
                 </footer>
 
 
+                <div class="remonter" id="remonter">
+                    On remonte !
+                </div>
+
+
 
 
 
@@ -240,6 +245,16 @@
             object.style.borderImage = 'url("images/bordure.svg") 1';
             texteDemineur.style.visibility = 'visible';
             texteDemineur.style.opacity = 1
+
+
+            var ele = document.getElementById("demineurA");
+            var x = 140;
+            var position = ele.offsetTop;
+            var maPosition = position - x;
+            window.scrollTo({
+            top: maPosition,
+            behavior: "smooth"
+            })
         }
         click = 1;
         
@@ -261,6 +276,17 @@
             quiprend.style.borderImage = 'url("images/bordure.svg") 1';
             texteQuiPrend.style.visibility = 'visible';
             texteQuiPrend.style.opacity = 1
+
+
+
+            var ele = document.getElementById("quiprend");
+            var x = 130;
+            var position = ele.offsetTop;
+            var maPosition = position - x;
+            window.scrollTo({
+            top: maPosition,
+            behavior: "smooth"
+            })
         }
         compteur = 1;
         
@@ -345,7 +371,10 @@
 
 
 
-
+    var remonte = document.getElementById('remonter');
+    remonte.onclick=function(){
+        window.scrollTo(0,0);
+    };
     window.onscroll = function(ev) {
         var x = document.getElementById('navBar');
         if ((window.innerHeight + window.pageYOffset) == window.innerHeight) {
@@ -354,11 +383,19 @@
         if ((window.innerHeight + window.pageYOffset) != window.innerHeight) {
             x.style.filter = 'drop-shadow(0px  4px 4px black)';
         }
+
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            remonte.style.visibility = 'visible';
+        }
+        else {
+            remonte.style.visibility = 'hidden';
+        }
     };
 
 
 
 
+    
 
 
 

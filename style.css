@@ -633,7 +633,74 @@ html{
 
 
 
-  @media (max-width:1660px) {
+
+
+
+  @-moz-document url-prefix() { 
+    nav ul li {
+        margin : 0;
+    }
+
+    nav ul li a {
+        margin : 0 0 0 0;
+    }
+  }
+
+
+
+
+
+  .remonter {
+    width: fit-content;
+    margin-bottom: 10%;
+    position: fixed;
+    bottom : 0;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  color: white;
+  background-color: #1F1B24;
+  padding: 20px 50px;
+  border: 3px solid #1fe8b6;
+
+  visibility: hidden;
+}
+
+.remonter::before,
+.remonter::after{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: inherit;
+  transition: all .2s ease-in;
+}
+
+.remonter::before{
+  top: -15px;
+  left: -15px;
+  border-width: 3px 0 0 3px;
+}
+
+.remonter::after{
+  bottom: -15px;
+  right: -15px;
+  border-width: 0 3px 3px 0;
+}
+.remonter:hover {
+  cursor: pointer;
+}
+
+.remonter:hover::before,
+.remonter:hover::after{
+  width: calc(100% + 27px);
+  height: calc(100% + 27px);
+}
+
+
+
+
+@media (max-width:1660px) {
 
     .image {
         display: block;
@@ -644,6 +711,10 @@ html{
         display: inline-block;
         width: 25%;
         margin-right: 5%;
+    }
+
+    .remonter {
+        right : 0;
     }
   }
 
@@ -670,18 +741,13 @@ html{
     .contactEmail, .contactLinkedin {
         width: 80%;
     }
-  }
 
 
-
-
-
-  @-moz-document url-prefix() { 
-    nav ul li {
-        margin : 0;
+    .remonter {
+        position: absolute;
     }
 
-    nav ul li a {
-        margin : 0 0 0 0;
+    nav {
+        visibility: hidden;
     }
   }
