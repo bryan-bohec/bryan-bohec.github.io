@@ -529,7 +529,14 @@ footer h4 {
     font-weight: bold;
 }
 
+.contactLinkedin img {
+    margin-top: 20px;
+    height: 80px;
 
+}
+.contactLinkedin h4 {
+    top : 7px;
+}
 
 
 
